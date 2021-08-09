@@ -1,0 +1,42 @@
+.appHeader {
+  background-color: white;
+}
+
+.topHeader {
+  height: 40px;
+  padding: 0 4%;
+  display: block;
+  background-color: #f5f5f5;;
+  line-height: 40px;
+}
+
+.buttonGroup {
+  float: right;
+  margin-top: 5px;
+}
+
+.mainHeader {
+  background-color: white !important;
+  height: 64px;
+  line-height: 64px;
+  width: 88%;
+  margin: 0 auto;
+}
+
+.title {
+  line-height: 64px;
+  display: inline;
+}
+
+.searchInput {
+  width: 400px !important;
+  line-height: 64px;
+  margin-top: 12px;
+  margin-left: 32px;
+}
+
+.main-menu {
+  padding: 0 6%;
+  background-color: #197602;
+  color: #f5f5f5;
+}
