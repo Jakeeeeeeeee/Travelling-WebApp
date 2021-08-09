@@ -1,5 +1,7 @@
 ### Tech Stack
-React - tsx
+- React - tsx
+- module.css
+- Ant Design
 
 
 ### Available Scripts
