@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './App.module.css';
+import { Footer, Header } from './components';
 
 function App() {
   return (
     <div className={styles.App}>
-      1qwe
+      <Header />
+      <Footer />
     </div>
   );
 }
