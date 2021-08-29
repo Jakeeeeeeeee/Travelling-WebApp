@@ -12,32 +12,33 @@ export class HomePage extends React.Component {
   render() {
     return (
       <div className={styles.pageContent}>
-      <Row style={{marginTop: 20}}>
-        <Col span={6}>
-          <SideMenu />
-        </Col>
-        <Col span={18}>
-          <Carousal />
-        </Col>
-      </Row>
+        <Row style={{marginTop: 20}}>
+          <Col span={6}>
+            <SideMenu />
+          </Col>
+          <Col span={18}>
+            <Carousal />
+          </Col>
+        </Row>
 
-      <ProductionCollection 
-        title={<Typography.Title level={3} type='warning'>Hot</Typography.Title>}
-        sideImage={sideImage}
-        products={productList1}
-      />
+        <ProductionCollection 
+          title={<Typography.Title level={3} type='warning'>Hot</Typography.Title>}
+          sideImage={sideImage}
+          products={productList1}
+        />
 
-      <ProductionCollection 
-        title={<Typography.Title level={3} type='danger'>New</Typography.Title>}
-        sideImage={sideImage2}
-        products={productList2}
-      />
+        <ProductionCollection 
+          title={<Typography.Title level={3} type='danger'>New</Typography.Title>}
+          sideImage={sideImage2}
+          products={productList2}
+        />
 
-      <ProductionCollection 
-        title={<Typography.Title level={3} type='success'>Recommend</Typography.Title>}
-        sideImage={sideImage3}
-        products={productList3}
-      />
-    </div>);
+        <ProductionCollection 
+          title={<Typography.Title level={3} type='success'>Recommend</Typography.Title>}
+          sideImage={sideImage3}
+          products={productList3}
+        />
+      </div>
+    );
   }
 }

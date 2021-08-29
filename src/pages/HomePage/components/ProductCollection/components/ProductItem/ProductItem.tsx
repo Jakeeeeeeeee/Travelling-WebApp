@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './ProductItem.module.css';
 import { Image, Typography } from 'antd';
 
 interface PropsType {
