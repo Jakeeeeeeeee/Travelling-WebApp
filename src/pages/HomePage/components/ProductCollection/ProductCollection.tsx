@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ProductCollection.module.css';
 import { Row, Col, Divider } from 'antd';
-import { ProductItem } from './components/ProductItem';
+import ProductItem from './components/ProductItem';
 
 interface PropsType {
   title: JSX.Element;
@@ -21,7 +21,7 @@ export const ProductionCollection: React.FC<PropsType> = ({title, sideImage, pro
         <Col span={20}>
           <Row>
             <Col span={12}>
-              <ProductItem 
+              <ProductItem
                 id={products[0].id}
                 size={'large'}
                 title={products[0].title}
