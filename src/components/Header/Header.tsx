@@ -3,12 +3,17 @@ import styles from './Header.module.css';
 import { GlobalOutlined } from '@ant-design/icons';
 import { Typography, Dropdown, Menu, Button, Layout, Input } from 'antd';
 import { MENULISTS } from './MENULISTS';
+import { useHistory, useLocation, useParams,useRouteMatch } from 'react-router';
 
 export const Header: React.FC = () => {
+  const history = useHistory();
+
   return (
     <div className={styles.appHeader}>
       <div className={styles.topHeader}>
-        <Typography.Text>Let's Travel</Typography.Text>
+        <span onClick={() => history.push('/')}>
+          <Typography.Text>Let's Travel</Typography.Text>
+        </span>
 
         <Dropdown.Button
           style={{ marginLeft: 15 }}
@@ -24,8 +29,8 @@ export const Header: React.FC = () => {
         </Dropdown.Button>
 
         <Button.Group className={styles.buttonGroup}>
-          <Button>Sign Up</Button>
-          <Button>Login In</Button>
+          <Button onClick={() => history.push('signUp')}>Sign Up</Button>
+          <Button onClick={() => history.push('logIn')}>Login In</Button>
         </Button.Group>
       </div>
 

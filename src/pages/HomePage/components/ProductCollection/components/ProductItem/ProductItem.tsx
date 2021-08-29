@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './ProductItem.module.css';
 import { Image, Typography } from 'antd';
+import { withRouter, RouteComponentProps, Link } from 'react-router-dom';
 
-interface PropsType {
+interface PropsType extends RouteComponentProps {
   id: string | number;
   size: 'large' | 'small';
   imageSrc: string;
@@ -10,9 +10,18 @@ interface PropsType {
   title: string;
 }
 
-export const ProductItem: React.FC<PropsType> = ({ id, size, imageSrc, price, title}) => {
+const ProductItemWrapper: React.FC<PropsType> = ({ 
+  id, 
+  size, 
+  imageSrc, 
+  price, 
+  title, 
+  history, 
+  location, 
+  match
+}) => {
   return (
-    <>
+    <Link to={`travelDetail/${id}`}>
       {size === 'large' ? (
         <Image src={imageSrc} height={285} width={490} />
       ) : (
@@ -26,6 +35,8 @@ export const ProductItem: React.FC<PropsType> = ({ id, size, imageSrc, price, ti
           $ {price}
         </Typography.Text>
       </div> 
-    </>                    
+    </Link>                    
   )
 };
+
+export default withRouter(ProductItemWrapper);
